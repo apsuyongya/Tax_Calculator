@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--<h1>Hello {{name}}</h1>-->
+<h1>GIVE YOUR DETAIL</h1>
+
+<form action="calc" method="post">
+    {% csrf_token %}
+    Enter your Jobs: <input type="text" name="job"><br><br>
+    Enter your Salary: <input type="text" name='salary'><br><br>
+    <input type = "submit">
+</form>
+<h1>Result: {{result}}</h1>
+
+<a href="{% url 'news' %}">News</a>
+
+{% endblock %}
