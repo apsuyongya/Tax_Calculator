@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div id="header">
+    <h1>TAX CALCULATOR NEPAL</h1>
+</div>
 <h1>GIVE YOUR DETAIL</h1>
 <h2>Personal status</h2>
 <form action="calc" method="post">
     {% csrf_token %}
-<!--    <input type="radio" name='married' checked/>Married-->
-<!--    <input type="radio" name='unmarried'/>Unmarried<br><br>-->
+
+        <h1>TAX CALCULATOR NEPAL</h1>
+
     <select name='gender'>
         <option value="married" selected>Married</option>
         <option value="unmarried">Unmarried</option>
