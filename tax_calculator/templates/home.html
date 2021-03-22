@@ -1,15 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!--<h1>Hello {{name}}</h1>-->
 <h1>GIVE YOUR DETAIL</h1>
-
+<h2>Personal status</h2>
 <form action="calc" method="post">
     {% csrf_token %}
-    Enter your Jobs: <input type="text" name="job"><br><br>
+<!--    <input type="radio" name='married' checked/>Married-->
+<!--    <input type="radio" name='unmarried'/>Unmarried<br><br>-->
+    <select name='gender'>
+        <option value="married" selected>Married</option>
+        <option value="unmarried">Unmarried</option>
+    </select>
+    <br><br>
     Enter your Salary: <input type="text" name='salary'><br><br>
+    Number of Moths: <input type="text" name="month"><br><br>
+    Number of Bonus: <input type="text" name="bonus"><br><br>
+    Medical expenses: <input type="text" name="expense"><br><br>
     <input type = "submit">
 </form>
+<h1>Total income: {{total}}</h1>
 <h1>Result: {{result}}</h1>
 
 <a href="{% url 'news' %}">News</a>
